@@ -1,0 +1,59 @@
+# Wireshark Traffic Analyzer
+
+A Python tool for analyzing exported Wireshark CSV/TXT logs.
+
+## Features
+
+* Filters network noise
+* Detects suspicious activity
+* Analyzes protocols, ports, IPs and DNS queries
+* Generates TXT and JSON reports
+* Supports CSV and TXT exports from Wireshark
+
+## Requirements
+
+* Python 3.12+
+* colorama
+
+Install dependencies:
+
+```bash
+pip install colorama
+```
+
+## Usage
+
+Analyze a capture file:
+
+```bash
+python analyzer.py traffic.csv
+```
+
+Show more results:
+
+```bash
+python analyzer.py traffic.csv --top 20
+```
+
+Save reports to another directory:
+
+```bash
+python analyzer.py traffic.csv --out-dir reports
+```
+
+Disable colored output:
+
+```bash
+python analyzer.py traffic.csv --no-color
+```
+
+## Output
+
+The analyzer generates:
+
+* report.txt
+* report.json
+
+## License
+
+MIT License
